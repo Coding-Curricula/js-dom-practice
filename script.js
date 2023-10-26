@@ -22,3 +22,15 @@ console.log('second paragraph again', p2Again)
 
 const selectBtn = document.querySelector('.btn')
 console.log('select button', selectBtn)
+
+// manipulating elements
+document.querySelector('#first-paragraph').innerText = 'Kombucha is yummy'
+document.querySelector('#second-paragraph').style.color = 'red'
+
+// add an image from the DOM
+const image = document.createElement('img')
+image.src = 'https://hbr.org/resources/images/article_assets/2020/05/May20_27_933445788_464881289-2.jpg'
+image.width = '200'
+image.style.display = 'block'
+image.style.marginTop = '10px'
+document.querySelector('.btn').append(image)
