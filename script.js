@@ -31,6 +31,23 @@ document.querySelector('#second-paragraph').style.color = 'red'
 const image = document.createElement('img')
 image.src = 'https://hbr.org/resources/images/article_assets/2020/05/May20_27_933445788_464881289-2.jpg'
 image.width = '200'
-image.style.display = 'block'
-image.style.marginTop = '10px'
+image.style.display = 'inline'
+image.style.marginTop = '100px'
 document.querySelector('.btn').append(image)
+
+// add a counter
+const addBtn = document.querySelector('#add-counter')
+const subtractBtn = document.querySelector('#subtract-counter')
+const resultSpan = document.querySelector('#result')
+
+let counter = 0
+
+addBtn.addEventListener('click', function () {
+    counter = counter + 1
+    resultSpan.innerHTML = counter;
+})
+
+subtractBtn.addEventListener('click', () => {
+    counter = counter - 1
+    resultSpan.innerHTML = counter;
+})
